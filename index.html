@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f7f0">
+  <meta name="description" content="A little German practice, every day. Learn 95 illustrated words and phrases from chapters 1.1a to 1.1c.">
+  <title>Wortgarten — German vocabulary practice</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="Wortgarten home">
+        <svg viewBox="0 0 36 36" aria-hidden="true"><path d="M18 29c-8-1-12-7-10-17 9 0 15 4 15 12M18 29c1-10 6-16 14-17 1 9-4 16-14 17ZM18 29V14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Wortgarten</span>
+      </a>
+      <p class="tagline">German, a little every day.</p>
+      <div class="side-label">YOUR LEARNING SPACE</div>
+      <nav class="views" aria-label="Choose a view">
+        <button class="view-button active" data-view="practice" aria-current="page"><span class="nav-icon">✳</span> Practice</button>
+        <button class="view-button" data-view="book"><span class="nav-icon">▤</span> Word book</button>
+      </nav>
+      <div class="side-label chapter-label">CHAPTER 01 · AT HOME</div>
+      <nav id="lesson-list" class="lessons" aria-label="Choose a lesson"></nav>
+      <div class="growth-card">
+        <div class="growth-title"><span>Words taking root</span><strong id="learned-count">0</strong></div>
+        <div class="growth-track"><span id="learned-bar"></span></div>
+        <p id="learned-caption">0 of 95 cards learned</p>
+      </div>
+      <div class="side-foot">95 WORDS &amp; PHRASES</div>
+    </aside>
+    <main class="main">
+      <div class="topline"><span class="edition"><b>DE / EN</b><span>HOME &amp; EVERYDAY LIFE</span></span><span class="local-note">Progress stays on this device</span></div>
+      <header class="intro"><div><p class="eyebrow">A LITTLE PRACTICE GOES A LONG WAY</p><h1 id="headline">Make yourself <em>at home.</em></h1><p id="subhead">Practise the words for home and everyday life.</p></div><div class="sun-mark" aria-hidden="true">✳</div></header>
+
+      <section id="practice-view" class="view-panel">
+        <div class="toolbar">
+          <label class="select-wrap"><span class="sr-only">Translation direction</span><select id="direction"><option value="de-en">German → English</option><option value="en-de">English → German</option><option value="mixed">Both directions</option></select></label>
+          <label class="select-wrap size-select"><span class="sr-only">Round length</span><select id="round-size"><option value="10">10 cards</option><option value="20">20 cards</option><option value="95">All cards</option></select></label>
+          <label class="check-option"><input id="pictures" type="checkbox" checked><span>Picture clues</span></label>
+          <label class="check-option"><input id="articles" type="checkbox" checked><span>Check der, die, das</span></label>
+          <button id="new-round" class="button button-quiet">↻ <span>New round</span></button>
+        </div>
+        <div id="practice-content" aria-live="polite"></div>
+      </section>
+
+      <section id="book-view" class="view-panel hidden">
+        <div class="book-toolbar"><label class="search-box"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Find a German or English word…" aria-label="Search vocabulary"></label><span id="book-count" class="book-count"></span></div>
+        <div id="word-grid" class="word-grid"></div>
+      </section>
+      <footer class="footer"><span><b>95 illustrated cards</b> · Sections 1.1a–1.1c · 1.1d excluded</span><span>Made for learning, one word at a time.</span></footer>
+    </main>
+  </div>
+</body>
+</html>
